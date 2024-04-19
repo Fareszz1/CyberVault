@@ -1,0 +1,389 @@
+/* For small devices (phones) */
+@media only screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    /* Adjust other styles as needed */
+}
+
+/* For medium devices (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+        /* Adjust other styles as needed */
+    }
+}
+
+/* For large devices (desktops) */
+@media only screen and (min-width: 1025px) {
+    .container {
+        max-width: 1200px;
+        /* Adjust other styles as needed */
+    }
+}
+
+
+html {
+    height: auto;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    /* خلفية الصفحة */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 20px;
+}
+
+.container {
+    max-width: 100%; /* Adjust maximum width */
+    margin: 0 auto;
+    max-height: 1000px;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    overflow: auto; /* Enable scrolling if content exceeds max width */
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Roboto Mono';
+}
+
+#containerlogo {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    font-family: 'Roboto Mono';
+    text-align: center;
+    font-size: 12px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.inputSearchBar {
+    border-style: none;
+    height: 50px;
+    width: 100%;
+    /* Change this to 100% */
+    outline: none;
+    border-radius: 10%;
+    transition: 0.5s ease-in-out;
+    border-bottom: 3px solid #1557c0;
+    padding-right: 50px;
+    /* Adjusted padding */
+    margin: 20px;
+    color: #000000;
+}
+
+.inputSearchBar {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-size: 17px;
+}
+
+.icon:focus~.input,
+.inputSearchBar:focus {
+    box-shadow: none;
+    width: 250px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 3px solid #1557c0;
+    transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+
+.iconSearch {
+    position: absolute;
+    left: 50%;
+    /* Positioning horizontally at the center */
+    top: 0;
+    /* Positioning vertically at the top */
+    transform: translate(-50%, 0);
+    /* Center horizontally */
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    margin-top: -4.5%;
+    border-style: none;
+    border-radius: 50%;
+    pointer-events: painted;
+    background-color: transparent;
+}
+
+.buttonCreate {
+    font-family: 'Roboto Mono';
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: .3s;
+}
+
+.buttonCreate:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+}
+
+.buttonImport {
+    font-family: 'Roboto Mono';
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: .3s;
+}
+
+.buttonImport:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+}
+
+.buttonExport {
+    font-family: 'Roboto Mono';
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: .3s;
+}
+
+.buttonExport:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+}
+
+.buttonDelete {
+    font-family: 'Roboto Mono';
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+    height: 45px;
+    transition: .3s;
+}
+
+.buttonDelete:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.buttonCreate,
+.buttonImport,
+.buttonDelete,
+.buttonExport {
+    flex: 1;
+    margin: 0 5px;
+    /* Adjust the margin for spacing between buttons */
+    max-width: 100%;
+    /* Adjust the maximum width of buttons if needed */
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.slider {
+    overflow: hidden;
+    background-color: white;
+    margin: 0 15px;
+    height: 80px;
+    width: 20px;
+    border-radius: 30px;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 30px #fff,
+        inset -5px -5px 10px rgba(0, 0, 255, 0.1),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.3), 0px 420px 0 400px #2697f3,
+        inset 0px 0px 0px rgba(0, 0, 0, 0.1);
+    animation: animate_2 2.5s ease-in-out infinite;
+    animation-delay: calc(-0.5s * var(--i));
+}
+
+@keyframes animate_2 {
+    0% {
+        transform: translateY(250px);
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(250px);
+        filter: hue-rotate(180deg);
+    }
+}
+
+.table-wrapper {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    border-collapse: collapse;
+    max-height: 700px;
+    /* Set a max height for the wrapper */
+    overflow: auto;
+    /* Enable scrolling if content exceeds max height */
+}
+
+.labelCell {
+    position: absolute;
+    top: 0;
+    font-family: 'Roboto Mono';
+    right: 0;
+    background-color: #ffffff; /* Example background color */
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #000000; /* Example text color */
+}
+
+.containerCell {
+    position: relative;
+    width: 75%;
+    /* Adjust padding and margin */
+    height: auto;
+    padding: 40px;
+    background-color: #ffffff;
+    margin-top: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 90px;
+    margin-left: 20px;
+    /* Adjust margin */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    /* Hide vertical overflow */
+}
+
+
+.btnSHOW {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 36%; /* Center the button horizontally */
+    margin-top: 20px; /* Adjust top margin as needed */
+}
+
+.btnDELETE {
+    padding: 10px 20px;
+    background-color: #f82929;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 36%; /* Center the button horizontally */
+    margin-top: 20px; /* Adjust top margin as needed */
+}
+
+.btnCOPY {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 36%; /* Center the button horizontally */
+    margin-top: 20px; /* Adjust top margin as needed */
+}
+
+
+.btnSHOW,
+.btnCOPY,
+.btnDELETE {
+    flex: 1;
+    margin: 0 5px;
+    /* Adjust the margin for spacing between buttons */
+    max-width: 100%;
+    /* Adjust the maximum width of buttons if needed */
+    justify-content: space-between;
+    margin-left: 40px;
+}
+
+.btnCOPY:hover {
+    background-color: #000000;
+    box-shadow: 0 0 0 5px #0304055f;
+    color: #fff;
+}
+
+.btnDELETE:hover {
+    background-color: #f82929;
+    box-shadow: 0 0 0 5px #ff6c6c5f;
+    color: #fff;
+}
+
+.labelT {
+    color: #000000;
+    font-weight: bold;
+    display: flex;
+    font-size: 17px;
+    margin: 5%;
+    text-align: center;
+    align-items: center;
+    border: 2px solid transparent;
+    justify-content: center;
+    font-family: 'Roboto Mono';
+}
+
+.btnSHOW:hover {
+    background-color: #3b82f6;
+    box-shadow: 0 0 0 5px #3b83f65f;
+    color: #fff;
+}
