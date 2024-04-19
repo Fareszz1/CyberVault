@@ -59,7 +59,7 @@ just download the Cyber Vault and run **Index.html**.
 ```
 
 ```sh
-  https://github.com/Fareszz1/CyberVault/archive/refs/heads/MYRED.zip
+  https://github.com/Fareszz1/CyberVault/archive/refs/heads/Main.zip
 ```
 
 ```sh
