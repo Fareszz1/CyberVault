@@ -20,6 +20,7 @@
 
 ## About the Project
 <img width="100%" alt="booking-screen" src="./Img/assets/preview.png">
+<img width="100%" alt="booking-screen" src="./Img/assets/program.png">
 "CyberVault: Your digital fortress, securing your information locally for unparalleled peace of mind in the digital realm."
 
 # More Than a JSON Editor
