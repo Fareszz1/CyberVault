@@ -1,0 +1,103 @@
+<!-- https://sweetalert2.github.io/#examples -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- style -->
+    <link rel="stylesheet" href="Config/CSS/style.css" />
+
+    <!-- icons -->
+    <!--link rel="icon" href="IMG/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="IMG/favicon.ico" type="image/x-icon"!-->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
+
+    <!-- title -->
+    <title>Cyber Vault</title>
+</head>
+
+<body>
+
+    
+    <!-- loader -->
+    <div class="container">
+        <section class="loader">
+
+            <div class="slider" style="--i:0">
+            </div>
+            <div class="slider" style="--i:1">
+            </div>
+            <div class="slider" style="--i:2">
+            </div>
+            <div class="slider" style="--i:3">
+            </div>
+            <div class="slider" style="--i:4">
+            </div>
+        </section>
+    </div>
+
+    <!-- Dashboard -->
+    <div class="container">
+        <h1>Dashboard</h1>
+        <div class="button-container">
+            <button class="buttonCreate" onclick="InsertData()">Create</button>
+            <button class="buttonImport" onclick="ImportData()">Import</button>
+            <button class="buttonExport" onclick="DownloadData()">Download</button>
+            <button class="buttonDelete" onclick="DeleteData()">Delete</button>
+        </div>
+    </div>
+
+    <!-- Search Bar -->
+
+    <div class="container">
+        <h1>Cyber Vault</h1>
+        <div class="input-wrapper">
+            <button class="iconSearch">
+                <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                        stroke="#1557c0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M22 22L20 20" stroke="#1557c0" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                    </path>
+                </svg>
+            </button>
+            <input type="text" name="text" class="inputSearchBar" />
+        </div>
+    </div>
+
+    <!-- Data Tabel -->
+    <div class="containertable">
+        <div class="table-wrapper">
+            <table>
+                <tbody id="DataTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <!-- Logo -->
+    <div id="containerlogo">
+        <img src="Img/OutBgLogo/MiniLogo-50X50.png" alt="Logo" class="logo">
+        <div id="copyright">&copy; 2024 Cyber Vault. DEV: Fareszz. All rights reserved.</div>
+    </div>
+
+</body>
+
+<!-- scripts -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="Config/JS/main.js"></script>
+
+</html>
