@@ -417,7 +417,7 @@ function loadData() {
                             inputValue,
                             icon: "info"
                         });
-                        
+
                     };
 
                     divElementData.appendChild(ShowButton);
@@ -431,16 +431,47 @@ function loadData() {
                     DeleteButton.onclick = function () {
                         // code
                         if (tableBody.rows.length > 1) {
-                            deleteRow(this);
                             Swal.fire({
+                                title: "Are you sure to delete " + data.DataName + " ?",
+                                text: "You won't be able to revert this!",
                                 icon: "warning",
-                                title: "Deleted!",
-                                text: data.DataName + " deleted !",
-                                timer: 1000,
-                                timerProgressBar: true,
-                                toast: true,
-                                position: "top-end",
-                                showConfirmButton: false
+                                showCancelButton: true,
+                                confirmButtonColor: "#3085d6",
+                                cancelButtonColor: "#d33",
+                                confirmButtonText: "Yes, delete it!"
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+
+                                    deleteRow(this);
+
+                                    var currentKeyD = Object.keys(dataObject)[key];
+                                    // Retrieve the JSON string from localStorage
+                                    let localStorageData = localStorage.getItem('Database');
+
+                                    // Parse the JSON string into a JavaScript object
+                                    let dataObjectD = JSON.parse(localStorageData);
+
+                                    // Delete the specific key
+                                    delete dataObjectD[currentKeyD];
+
+                                    // Stringify the updated object
+                                    let updatedLocalStorageData = JSON.stringify(dataObjectD);
+
+                                    // Store the updated JSON string back into localStorage
+                                    localStorage.setItem('Database', updatedLocalStorageData);
+
+                                    Swal.fire({
+                                        icon: "warning",
+                                        title: "Deleted!",
+                                        text: data.DataName + " deleted !",
+                                        timer: 1000,
+                                        timerProgressBar: true,
+                                        toast: true,
+                                        position: "top-end",
+                                        showConfirmButton: false
+                                    });
+
+                                }
                             });
                         }
                         else {
@@ -547,14 +578,19 @@ async function ImportData() {
                             // Convert parsedData to string
                             const parsedDataString = JSON.stringify(parsedData);
 
-                            // Check if parsedDataString contains the text "Database"
-                            if (parsedDataString.includes("Database")) {
-                                Swal.fire({
-                                    title: "Error!",
-                                    text: "JSON data does not contain the expected key.",
-                                    icon: "error"
-                                });
-                                return;
+
+                            for (const keys in parsedData) {
+                                if (parsedData.hasOwnProperty(keys)) {
+                                    // Check if parsedDataString contains the text "Database"
+                                    if (keys.includes("Database")) {
+                                        Swal.fire({
+                                            title: "Error!",
+                                            text: "JSON data does not contain the expected key.",
+                                            icon: "error"
+                                        });
+                                        return;
+                                    }
+                                }
                             }
 
                             for (const key in parsedData) {
